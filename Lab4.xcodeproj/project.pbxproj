@@ -15,6 +15,7 @@
 		99FC0D041CA1F40A00593A94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99FC0D021CA1F40A00593A94 /* LaunchScreen.storyboard */; };
 		99FC0D0F1CA1F40A00593A94 /* Lab4Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 99FC0D0E1CA1F40A00593A94 /* Lab4Tests.m */; };
 		99FC0D1A1CA1F40A00593A94 /* Lab4UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 99FC0D191CA1F40A00593A94 /* Lab4UITests.m */; };
+		99FC0D2B1CA2192400593A94 /* FlashcardsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 99FC0D2A1CA2192400593A94 /* FlashcardsModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		99FC0D151CA1F40A00593A94 /* Lab4UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Lab4UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		99FC0D191CA1F40A00593A94 /* Lab4UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Lab4UITests.m; sourceTree = "<group>"; };
 		99FC0D1B1CA1F40A00593A94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99FC0D291CA2192400593A94 /* FlashcardsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlashcardsModel.h; path = ../FlashcardsModel.h; sourceTree = "<group>"; };
+		99FC0D2A1CA2192400593A94 /* FlashcardsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlashcardsModel.m; path = ../FlashcardsModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +104,9 @@
 		99FC0CF31CA1F40A00593A94 /* Lab4 */ = {
 			isa = PBXGroup;
 			children = (
-				99FC0CF71CA1F40A00593A94 /* AppDelegate.h */,
-				99FC0CF81CA1F40A00593A94 /* AppDelegate.m */,
-				99FC0CFA1CA1F40A00593A94 /* ViewController.h */,
-				99FC0CFB1CA1F40A00593A94 /* ViewController.m */,
-				99FC0CFD1CA1F40A00593A94 /* Main.storyboard */,
-				99FC0D001CA1F40A00593A94 /* Assets.xcassets */,
-				99FC0D021CA1F40A00593A94 /* LaunchScreen.storyboard */,
-				99FC0D051CA1F40A00593A94 /* Info.plist */,
+				99FC0D2D1CA219F400593A94 /* Controller */,
+				99FC0D2E1CA21A1400593A94 /* View */,
+				99FC0D2C1CA219EE00593A94 /* Model */,
 				99FC0CF41CA1F40A00593A94 /* Supporting Files */,
 			);
 			path = Lab4;
@@ -117,6 +115,10 @@
 		99FC0CF41CA1F40A00593A94 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				99FC0D021CA1F40A00593A94 /* LaunchScreen.storyboard */,
+				99FC0CF71CA1F40A00593A94 /* AppDelegate.h */,
+				99FC0CF81CA1F40A00593A94 /* AppDelegate.m */,
+				99FC0D051CA1F40A00593A94 /* Info.plist */,
 				99FC0CF51CA1F40A00593A94 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -138,6 +140,33 @@
 				99FC0D1B1CA1F40A00593A94 /* Info.plist */,
 			);
 			path = Lab4UITests;
+			sourceTree = "<group>";
+		};
+		99FC0D2C1CA219EE00593A94 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				99FC0D291CA2192400593A94 /* FlashcardsModel.h */,
+				99FC0D2A1CA2192400593A94 /* FlashcardsModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		99FC0D2D1CA219F400593A94 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				99FC0CFA1CA1F40A00593A94 /* ViewController.h */,
+				99FC0CFB1CA1F40A00593A94 /* ViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		99FC0D2E1CA21A1400593A94 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				99FC0CFD1CA1F40A00593A94 /* Main.storyboard */,
+				99FC0D001CA1F40A00593A94 /* Assets.xcassets */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99FC0D2B1CA2192400593A94 /* FlashcardsModel.m in Sources */,
 				99FC0CFC1CA1F40A00593A94 /* ViewController.m in Sources */,
 				99FC0CF91CA1F40A00593A94 /* AppDelegate.m in Sources */,
 				99FC0CF61CA1F40A00593A94 /* main.m in Sources */,
