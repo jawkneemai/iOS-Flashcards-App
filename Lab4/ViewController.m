@@ -8,29 +8,113 @@
 
 #import "ViewController.h"
 #import "FlashcardsModel.h"
+#import <AudioToolbox/AudioToolbox.h>
 
 @interface ViewController ()
 
 // private properties
 @property (strong, nonatomic) FlashcardsModel *flashcardsModel;
+@property bool onQuestion; // Used to determine if screen is on question or answer
+@property (readonly) SystemSoundID soundFileID;
 
 // IBOutlets
 @property (weak, nonatomic) IBOutlet UILabel *questionLabel;
-@property (weak, nonatomic) IBOutlet UILabel *answerLabel;
 
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
+    NSLog(@"hi");
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
     self.flashcardsModel = [FlashcardsModel sharedModel];
+    self.onQuestion = true;
     
     // Display the first flash card in the set
-    self.questionLabel.text = [self.flashcardsModel flashcardAtIndex: 0][kQuestionKey];
-    self.answerLabel.text = [self.flashcardsModel flashcardAtIndex: 0][kAnswerKey];
+    int i = rand() % [self.flashcardsModel numberOfFlashcards];
+    self.questionLabel.text = [self.flashcardsModel flashcardAtIndex: i][kQuestionKey];
+    self.flashcardsModel.currentIndex = i;
+    
+    // Gestures - Taps
+    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(singleTapRecognized:)];
+    [self.view addGestureRecognizer:singleTap];
+    
+    UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTapRecognized:)];
+    doubleTap.numberOfTapsRequired = 2;
+    [self.view addGestureRecognizer:doubleTap];
+    
+    [singleTap requireGestureRecognizerToFail: doubleTap];
+    
+    // Gestures - Swipes
+    UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(leftSwipeGestureRecognized:)];
+    swipeLeft.direction = UISwipeGestureRecognizerDirectionLeft;
+    [self.view addGestureRecognizer:swipeLeft];
+    
+    UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(rightSwipeGestureRecognized:)];
+    swipeRight.direction = UISwipeGestureRecognizerDirectionRight;
+    [self.view addGestureRecognizer:swipeRight];
+    
+    // Sound
+    //NSString *soundFilePath = [[NSBundle mainBundle] pathForResource:@"fadein" ofType:@"wav"];
+    //NSURL *soundURL = [NSURL fileURLWithPath:soundFilePath];
+    
+    //AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &_soundFileID);
+    
+    
+}
+
+- (void) singleTapRecognized: (UITapGestureRecognizer *) recognizer {
+    int i = random()%[self.flashcardsModel numberOfFlashcards];
+    self.questionLabel.text = [self.flashcardsModel flashcardAtIndex: i][kQuestionKey];
+    self.flashcardsModel.currentIndex = i;
+    
+    //AudioServicesPlaySystemSound(self.soundFileID);
+}
+
+- (void) doubleTapRecognized: (UITapGestureRecognizer *) recognizer {
+    if (self.onQuestion == true) {
+        self.questionLabel.text = [self.flashcardsModel flashcardAtIndex: self.flashcardsModel.currentIndex][ kAnswerKey];
+        self.onQuestion = false;
+    } else {
+        self.questionLabel.text = [self.flashcardsModel flashcardAtIndex: self.flashcardsModel.currentIndex][kQuestionKey];
+        self.onQuestion = true;
+    }
+}
+
+- (void) rightSwipeGestureRecognized: (UITapGestureRecognizer *) recognizer {
+    NSLog(@"Right Swipe");
+    [self.flashcardsModel nextFlashcard]; // sets currentIndex in method
+    self.questionLabel.text = [self.flashcardsModel flashcardAtIndex: self.flashcardsModel.currentIndex][kQuestionKey];
+}
+
+- (void) leftSwipeGestureRecognized: (UITapGestureRecognizer *) recognizer {
+    NSLog(@"Left Swipe");
+    [self.flashcardsModel prevFlashcard]; // sets currentIndex in method
+    self.questionLabel.text = [self.flashcardsModel flashcardAtIndex: self.flashcardsModel.currentIndex][kQuestionKey];
+}
+
+
+- (BOOL) canBecomeFirstResponder {
+    return YES;
+}
+
+- (void) viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self becomeFirstResponder];
+}
+
+- (void) motionEnded: (UIEventSubtype) motion
+           withEvent: (UIEvent *) event {
+    
+    if (motion == UIEventSubtypeMotionShake) {
+        NSLog(@"SHAKE N BAKE");
+        int i = random()%[self.flashcardsModel numberOfFlashcards];
+        self.questionLabel.text = [self.flashcardsModel flashcardAtIndex: i][kQuestionKey];
+        self.flashcardsModel.currentIndex = i;
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {

@@ -16,6 +16,7 @@
 		99FC0D0F1CA1F40A00593A94 /* Lab4Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 99FC0D0E1CA1F40A00593A94 /* Lab4Tests.m */; };
 		99FC0D1A1CA1F40A00593A94 /* Lab4UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 99FC0D191CA1F40A00593A94 /* Lab4UITests.m */; };
 		99FC0D2B1CA2192400593A94 /* FlashcardsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 99FC0D2A1CA2192400593A94 /* FlashcardsModel.m */; };
+		99FC0D301CA647EC00593A94 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99FC0D2F1CA647EC00593A94 /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		99FC0D1B1CA1F40A00593A94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99FC0D291CA2192400593A94 /* FlashcardsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlashcardsModel.h; path = ../FlashcardsModel.h; sourceTree = "<group>"; };
 		99FC0D2A1CA2192400593A94 /* FlashcardsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlashcardsModel.m; path = ../FlashcardsModel.m; sourceTree = "<group>"; };
+		99FC0D2F1CA647EC00593A94 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99FC0D301CA647EC00593A94 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +87,7 @@
 		99FC0CE81CA1F40A00593A94 = {
 			isa = PBXGroup;
 			children = (
+				99FC0D2F1CA647EC00593A94 /* AudioToolbox.framework */,
 				99FC0CF31CA1F40A00593A94 /* Lab4 */,
 				99FC0D0D1CA1F40A00593A94 /* Lab4Tests */,
 				99FC0D181CA1F40A00593A94 /* Lab4UITests */,
@@ -529,6 +533,7 @@
 				99FC0D201CA1F40A00593A94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		99FC0D211CA1F40A00593A94 /* Build configuration list for PBXNativeTarget "Lab4Tests" */ = {
 			isa = XCConfigurationList;
@@ -537,6 +542,7 @@
 				99FC0D231CA1F40A00593A94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		99FC0D241CA1F40A00593A94 /* Build configuration list for PBXNativeTarget "Lab4UITests" */ = {
 			isa = XCConfigurationList;
@@ -545,6 +551,7 @@
 				99FC0D261CA1F40A00593A94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

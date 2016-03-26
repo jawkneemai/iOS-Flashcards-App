@@ -7,8 +7,11 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "FlashcardsModel.h"
 
 @interface Lab4Tests : XCTestCase
+
+@property (strong, nonatomic) FlashcardsModel *flashcardsModel;
 
 @end
 
@@ -16,6 +19,8 @@
 
 - (void)setUp {
     [super setUp];
+    self.flashcardsModel = [FlashcardsModel sharedModel];
+
     // Put setup code here. This method is called before the invocation of each test method in the class.
 }
 

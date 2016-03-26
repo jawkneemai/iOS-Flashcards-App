@@ -14,6 +14,8 @@ static NSString * const kAnswerKey = @"answer";
 
 @interface FlashcardsModel : NSObject
 
+@property (readwrite, assign) NSUInteger currentIndex;
+
 
 // public methods
 + (instancetype) sharedModel;

@@ -11,7 +11,6 @@
 @interface FlashcardsModel ()
 
     @property (strong, nonatomic) NSMutableArray *flashcards;
-    @property (readwrite, assign) NSUInteger currentIndex;
 
 @end
 
