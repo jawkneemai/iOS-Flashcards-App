@@ -37,7 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		99FC0CF11CA1F40A00593A94 /* Lab4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lab4.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		99FC0CF11CA1F40A00593A94 /* Flashcards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flashcards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99FC0CF51CA1F40A00593A94 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		99FC0CF71CA1F40A00593A94 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		99FC0CF81CA1F40A00593A94 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -47,10 +47,10 @@
 		99FC0D001CA1F40A00593A94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99FC0D031CA1F40A00593A94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		99FC0D051CA1F40A00593A94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		99FC0D0A1CA1F40A00593A94 /* Lab4Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Lab4Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		99FC0D0A1CA1F40A00593A94 /* Flashcards.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Flashcards.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		99FC0D0E1CA1F40A00593A94 /* Lab4Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Lab4Tests.m; sourceTree = "<group>"; };
 		99FC0D101CA1F40A00593A94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		99FC0D151CA1F40A00593A94 /* Lab4UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Lab4UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		99FC0D151CA1F40A00593A94 /* Flashcards.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Flashcards.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		99FC0D191CA1F40A00593A94 /* Lab4UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Lab4UITests.m; sourceTree = "<group>"; };
 		99FC0D1B1CA1F40A00593A94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99FC0D291CA2192400593A94 /* FlashcardsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlashcardsModel.h; path = ../FlashcardsModel.h; sourceTree = "<group>"; };
@@ -98,9 +98,9 @@
 		99FC0CF21CA1F40A00593A94 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				99FC0CF11CA1F40A00593A94 /* Lab4.app */,
-				99FC0D0A1CA1F40A00593A94 /* Lab4Tests.xctest */,
-				99FC0D151CA1F40A00593A94 /* Lab4UITests.xctest */,
+				99FC0CF11CA1F40A00593A94 /* Flashcards.app */,
+				99FC0D0A1CA1F40A00593A94 /* Flashcards.xctest */,
+				99FC0D151CA1F40A00593A94 /* Flashcards.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -176,9 +176,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		99FC0CF01CA1F40A00593A94 /* Lab4 */ = {
+		99FC0CF01CA1F40A00593A94 /* Flashcards */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 99FC0D1E1CA1F40A00593A94 /* Build configuration list for PBXNativeTarget "Lab4" */;
+			buildConfigurationList = 99FC0D1E1CA1F40A00593A94 /* Build configuration list for PBXNativeTarget "Flashcards" */;
 			buildPhases = (
 				99FC0CED1CA1F40A00593A94 /* Sources */,
 				99FC0CEE1CA1F40A00593A94 /* Frameworks */,
@@ -188,14 +188,14 @@
 			);
 			dependencies = (
 			);
-			name = Lab4;
+			name = Flashcards;
 			productName = Lab4;
-			productReference = 99FC0CF11CA1F40A00593A94 /* Lab4.app */;
+			productReference = 99FC0CF11CA1F40A00593A94 /* Flashcards.app */;
 			productType = "com.apple.product-type.application";
 		};
-		99FC0D091CA1F40A00593A94 /* Lab4Tests */ = {
+		99FC0D091CA1F40A00593A94 /* FlashcardsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 99FC0D211CA1F40A00593A94 /* Build configuration list for PBXNativeTarget "Lab4Tests" */;
+			buildConfigurationList = 99FC0D211CA1F40A00593A94 /* Build configuration list for PBXNativeTarget "FlashcardsTests" */;
 			buildPhases = (
 				99FC0D061CA1F40A00593A94 /* Sources */,
 				99FC0D071CA1F40A00593A94 /* Frameworks */,
@@ -206,14 +206,14 @@
 			dependencies = (
 				99FC0D0C1CA1F40A00593A94 /* PBXTargetDependency */,
 			);
-			name = Lab4Tests;
+			name = FlashcardsTests;
 			productName = Lab4Tests;
-			productReference = 99FC0D0A1CA1F40A00593A94 /* Lab4Tests.xctest */;
+			productReference = 99FC0D0A1CA1F40A00593A94 /* Flashcards.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		99FC0D141CA1F40A00593A94 /* Lab4UITests */ = {
+		99FC0D141CA1F40A00593A94 /* FlashcardsUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 99FC0D241CA1F40A00593A94 /* Build configuration list for PBXNativeTarget "Lab4UITests" */;
+			buildConfigurationList = 99FC0D241CA1F40A00593A94 /* Build configuration list for PBXNativeTarget "FlashcardsUITests" */;
 			buildPhases = (
 				99FC0D111CA1F40A00593A94 /* Sources */,
 				99FC0D121CA1F40A00593A94 /* Frameworks */,
@@ -224,9 +224,9 @@
 			dependencies = (
 				99FC0D171CA1F40A00593A94 /* PBXTargetDependency */,
 			);
-			name = Lab4UITests;
+			name = FlashcardsUITests;
 			productName = Lab4UITests;
-			productReference = 99FC0D151CA1F40A00593A94 /* Lab4UITests.xctest */;
+			productReference = 99FC0D151CA1F40A00593A94 /* Flashcards.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -254,7 +254,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 99FC0CEC1CA1F40A00593A94 /* Build configuration list for PBXProject "Lab4" */;
+			buildConfigurationList = 99FC0CEC1CA1F40A00593A94 /* Build configuration list for PBXProject "Flashcards" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -267,9 +267,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				99FC0CF01CA1F40A00593A94 /* Lab4 */,
-				99FC0D091CA1F40A00593A94 /* Lab4Tests */,
-				99FC0D141CA1F40A00593A94 /* Lab4UITests */,
+				99FC0CF01CA1F40A00593A94 /* Flashcards */,
+				99FC0D091CA1F40A00593A94 /* FlashcardsTests */,
+				99FC0D141CA1F40A00593A94 /* FlashcardsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -334,12 +334,12 @@
 /* Begin PBXTargetDependency section */
 		99FC0D0C1CA1F40A00593A94 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 99FC0CF01CA1F40A00593A94 /* Lab4 */;
+			target = 99FC0CF01CA1F40A00593A94 /* Flashcards */;
 			targetProxy = 99FC0D0B1CA1F40A00593A94 /* PBXContainerItemProxy */;
 		};
 		99FC0D171CA1F40A00593A94 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 99FC0CF01CA1F40A00593A94 /* Lab4 */;
+			target = 99FC0CF01CA1F40A00593A94 /* Flashcards */;
 			targetProxy = 99FC0D161CA1F40A00593A94 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -451,7 +451,7 @@
 				INFOPLIST_FILE = Lab4/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.usc.Lab4;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Flashcards;
 			};
 			name = Debug;
 		};
@@ -462,7 +462,7 @@
 				INFOPLIST_FILE = Lab4/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.usc.Lab4;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Flashcards;
 			};
 			name = Release;
 		};
@@ -473,8 +473,8 @@
 				INFOPLIST_FILE = Lab4Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.usc.Lab4Tests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lab4.app/Lab4";
+				PRODUCT_NAME = Flashcards;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Flashcards.app/Flashcards";
 			};
 			name = Debug;
 		};
@@ -485,8 +485,8 @@
 				INFOPLIST_FILE = Lab4Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.usc.Lab4Tests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lab4.app/Lab4";
+				PRODUCT_NAME = Flashcards;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Flashcards.app/Flashcards";
 			};
 			name = Release;
 		};
@@ -496,7 +496,7 @@
 				INFOPLIST_FILE = Lab4UITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.usc.Lab4UITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Flashcards;
 				TEST_TARGET_NAME = Lab4;
 				USES_XCTRUNNER = YES;
 			};
@@ -508,7 +508,7 @@
 				INFOPLIST_FILE = Lab4UITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.usc.Lab4UITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Flashcards;
 				TEST_TARGET_NAME = Lab4;
 				USES_XCTRUNNER = YES;
 			};
@@ -517,7 +517,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		99FC0CEC1CA1F40A00593A94 /* Build configuration list for PBXProject "Lab4" */ = {
+		99FC0CEC1CA1F40A00593A94 /* Build configuration list for PBXProject "Flashcards" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				99FC0D1C1CA1F40A00593A94 /* Debug */,
@@ -526,7 +526,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		99FC0D1E1CA1F40A00593A94 /* Build configuration list for PBXNativeTarget "Lab4" */ = {
+		99FC0D1E1CA1F40A00593A94 /* Build configuration list for PBXNativeTarget "Flashcards" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				99FC0D1F1CA1F40A00593A94 /* Debug */,
@@ -535,7 +535,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		99FC0D211CA1F40A00593A94 /* Build configuration list for PBXNativeTarget "Lab4Tests" */ = {
+		99FC0D211CA1F40A00593A94 /* Build configuration list for PBXNativeTarget "FlashcardsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				99FC0D221CA1F40A00593A94 /* Debug */,
@@ -544,7 +544,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		99FC0D241CA1F40A00593A94 /* Build configuration list for PBXNativeTarget "Lab4UITests" */ = {
+		99FC0D241CA1F40A00593A94 /* Build configuration list for PBXNativeTarget "FlashcardsUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				99FC0D251CA1F40A00593A94 /* Debug */,
