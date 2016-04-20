@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>flash card 1</key>
+	<dict>
+		<key>question</key>
+		<string>Where is Moscow?</string>
+		<key>answer</key>
+		<string>Russia</string>
+	</dict>
+</dict>
+</plist>

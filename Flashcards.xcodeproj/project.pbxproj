@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9978B1571CB8AD2200F5FAD5 /* flashcards.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9978B1561CB8AD2200F5FAD5 /* flashcards.plist */; };
+		998E830B1CB84C23001E521F /* FlashcardsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 998E830A1CB84C23001E521F /* FlashcardsTableViewController.m */; };
+		998E830E1CB87610001E521F /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 998E830D1CB87610001E521F /* AddViewController.m */; };
 		99FC0CF61CA1F40A00593A94 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 99FC0CF51CA1F40A00593A94 /* main.m */; };
 		99FC0CF91CA1F40A00593A94 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 99FC0CF81CA1F40A00593A94 /* AppDelegate.m */; };
 		99FC0CFC1CA1F40A00593A94 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99FC0CFB1CA1F40A00593A94 /* ViewController.m */; };
@@ -37,6 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9978B1561CB8AD2200F5FAD5 /* flashcards.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = flashcards.plist; sourceTree = "<group>"; };
+		998E83091CB84C23001E521F /* FlashcardsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlashcardsTableViewController.h; path = ../FlashcardsTableViewController.h; sourceTree = "<group>"; };
+		998E830A1CB84C23001E521F /* FlashcardsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlashcardsTableViewController.m; path = ../FlashcardsTableViewController.m; sourceTree = "<group>"; };
+		998E830C1CB87610001E521F /* AddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddViewController.h; sourceTree = "<group>"; };
+		998E830D1CB87610001E521F /* AddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
 		99FC0CF11CA1F40A00593A94 /* Flashcards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flashcards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99FC0CF51CA1F40A00593A94 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		99FC0CF71CA1F40A00593A94 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -151,6 +159,7 @@
 			children = (
 				99FC0D291CA2192400593A94 /* FlashcardsModel.h */,
 				99FC0D2A1CA2192400593A94 /* FlashcardsModel.m */,
+				9978B1561CB8AD2200F5FAD5 /* flashcards.plist */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -158,8 +167,12 @@
 		99FC0D2D1CA219F400593A94 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				998E83091CB84C23001E521F /* FlashcardsTableViewController.h */,
+				998E830A1CB84C23001E521F /* FlashcardsTableViewController.m */,
 				99FC0CFA1CA1F40A00593A94 /* ViewController.h */,
 				99FC0CFB1CA1F40A00593A94 /* ViewController.m */,
+				998E830C1CB87610001E521F /* AddViewController.h */,
+				998E830D1CB87610001E521F /* AddViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -280,6 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				99FC0D041CA1F40A00593A94 /* LaunchScreen.storyboard in Resources */,
+				9978B1571CB8AD2200F5FAD5 /* flashcards.plist in Resources */,
 				99FC0D011CA1F40A00593A94 /* Assets.xcassets in Resources */,
 				99FC0CFF1CA1F40A00593A94 /* Main.storyboard in Resources */,
 			);
@@ -308,6 +322,8 @@
 			files = (
 				99FC0D2B1CA2192400593A94 /* FlashcardsModel.m in Sources */,
 				99FC0CFC1CA1F40A00593A94 /* ViewController.m in Sources */,
+				998E830E1CB87610001E521F /* AddViewController.m in Sources */,
+				998E830B1CB84C23001E521F /* FlashcardsTableViewController.m in Sources */,
 				99FC0CF91CA1F40A00593A94 /* AppDelegate.m in Sources */,
 				99FC0CF61CA1F40A00593A94 /* main.m in Sources */,
 			);

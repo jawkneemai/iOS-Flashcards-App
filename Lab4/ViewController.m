@@ -33,9 +33,13 @@
     self.onQuestion = true;
     
     // Display the first flash card in the set
-    int i = rand() % [self.flashcardsModel numberOfFlashcards];
-    self.questionLabel.text = [self.flashcardsModel flashcardAtIndex: i][kQuestionKey];
-    self.flashcardsModel.currentIndex = i;
+    if ([self.flashcardsModel numberOfFlashcards] != 0) {
+        int i = rand() % [self.flashcardsModel numberOfFlashcards];
+        self.questionLabel.text = [self.flashcardsModel flashcardAtIndex: i][kQuestionKey];
+        self.flashcardsModel.currentIndex = i;
+    } else if ([self.flashcardsModel numberOfFlashcards] == 0) {
+        self.questionLabel.text = @"There are no flashcards!";
+    }
     
     // Gestures - Taps
     UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(singleTapRecognized:)];
@@ -66,6 +70,11 @@
 }
 
 - (void) singleTapRecognized: (UITapGestureRecognizer *) recognizer {
+    
+    if ([self.flashcardsModel numberOfFlashcards] == 0) { // handles when there are no flashcards to display
+        self.questionLabel.text = @"There are no flashcards!";
+    }
+    
     int i = random()%[self.flashcardsModel numberOfFlashcards];
     self.questionLabel.text = [self.flashcardsModel flashcardAtIndex: i][kQuestionKey];
     self.flashcardsModel.currentIndex = i;
@@ -74,6 +83,11 @@
 }
 
 - (void) doubleTapRecognized: (UITapGestureRecognizer *) recognizer {
+    
+    if ([self.flashcardsModel numberOfFlashcards] == 0) { // handles when there are no flashcards to display
+        self.questionLabel.text = @"There are no flashcards!";
+    }
+    
     if (self.onQuestion == true) {
         self.questionLabel.text = [self.flashcardsModel flashcardAtIndex: self.flashcardsModel.currentIndex][ kAnswerKey];
         self.onQuestion = false;
@@ -84,12 +98,22 @@
 }
 
 - (void) rightSwipeGestureRecognized: (UITapGestureRecognizer *) recognizer {
+    
+    if ([self.flashcardsModel numberOfFlashcards] == 0) { // handles when there are no flashcards to display
+        self.questionLabel.text = @"There are no flashcards!";
+    }
+    
     NSLog(@"Right Swipe");
     [self.flashcardsModel nextFlashcard]; // sets currentIndex in method
     self.questionLabel.text = [self.flashcardsModel flashcardAtIndex: self.flashcardsModel.currentIndex][kQuestionKey];
 }
 
 - (void) leftSwipeGestureRecognized: (UITapGestureRecognizer *) recognizer {
+    
+    if ([self.flashcardsModel numberOfFlashcards] == 0) { // handles when there are no flashcards to display
+        self.questionLabel.text = @"There are no flashcards!";
+    }
+    
     NSLog(@"Left Swipe");
     [self.flashcardsModel prevFlashcard]; // sets currentIndex in method
     self.questionLabel.text = [self.flashcardsModel flashcardAtIndex: self.flashcardsModel.currentIndex][kQuestionKey];
@@ -109,7 +133,11 @@
            withEvent: (UIEvent *) event {
     
     if (motion == UIEventSubtypeMotionShake) {
-        NSLog(@"SHAKE N BAKE");
+        
+        if ([self.flashcardsModel numberOfFlashcards] == 0) { // handles when there are no flashcards to display
+            self.questionLabel.text = @"There are no flashcards!";
+        }
+        
         int i = random()%[self.flashcardsModel numberOfFlashcards];
         self.questionLabel.text = [self.flashcardsModel flashcardAtIndex: i][kQuestionKey];
         self.flashcardsModel.currentIndex = i;

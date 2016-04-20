@@ -11,6 +11,7 @@
 // constants
 static NSString * const kQuestionKey = @"question";
 static NSString * const kAnswerKey = @"answer";
+static NSString * const kFlashcardsPList = @"flashcards.plist";
 
 @interface FlashcardsModel : NSObject
 
