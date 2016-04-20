@@ -79,6 +79,9 @@
     self.questionLabel.text = [self.flashcardsModel flashcardAtIndex: i][kQuestionKey];
     self.flashcardsModel.currentIndex = i;
     
+    [self fadeInCard:i];
+    self.onQuestion = YES;
+
     //AudioServicesPlaySystemSound(self.soundFileID);
 }
 
@@ -106,6 +109,8 @@
     NSLog(@"Right Swipe");
     [self.flashcardsModel nextFlashcard]; // sets currentIndex in method
     self.questionLabel.text = [self.flashcardsModel flashcardAtIndex: self.flashcardsModel.currentIndex][kQuestionKey];
+    [self fadeInCard:self.flashcardsModel.currentIndex];
+    self.onQuestion = YES;
 }
 
 - (void) leftSwipeGestureRecognized: (UITapGestureRecognizer *) recognizer {
@@ -116,7 +121,8 @@
     
     NSLog(@"Left Swipe");
     [self.flashcardsModel prevFlashcard]; // sets currentIndex in method
-    self.questionLabel.text = [self.flashcardsModel flashcardAtIndex: self.flashcardsModel.currentIndex][kQuestionKey];
+    [self fadeInCard:self.flashcardsModel.currentIndex];
+    self.onQuestion = YES;
 }
 
 
@@ -143,6 +149,17 @@
         self.flashcardsModel.currentIndex = i;
     }
     
+}
+
+// Animation
+
+- (void) fadeInCard: (int) flashcardIndex {
+    self.questionLabel.alpha = 0;
+    self.questionLabel.text = [self.flashcardsModel flashcardAtIndex: flashcardIndex][kQuestionKey];
+    
+    [UIView animateWithDuration: 1.0 animations:^{
+        self.questionLabel.alpha = 1;
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
