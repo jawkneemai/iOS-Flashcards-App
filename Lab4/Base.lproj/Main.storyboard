@@ -87,7 +87,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ndA-1K-BuZ">
                             <connections>
                                 <action selector="addButtonPressed:" destination="o5m-lf-96d" id="EG5-7k-r06"/>
-                                <segue destination="ag7-br-YrV" kind="presentation" id="KlQ-8A-QjD"/>
+                                <segue destination="ag7-br-YrV" kind="presentation" identifier="addCard" id="KlQ-8A-QjD"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

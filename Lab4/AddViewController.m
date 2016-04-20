@@ -52,14 +52,22 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (BOOL) textView:(UITextView *) textViewQuestion shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
-    if (self.textViewQuestion.text.length > 0 && self.textFieldAnswer.text.length > 0) {
-        self.buttonSaveFlashcard.enabled = YES;
-    } else {
-        self.buttonSaveFlashcard.enabled = NO;
-    }
+- (BOOL) textView:(UITextView *) textViewQuestion shouldChangeTextInRange:(NSRange)range replacementString:(NSString *)string {
+
+    NSString *changedString = [textViewQuestion.text
+                               stringByReplacingCharactersInRange: range
+                               withString: string];
+    
+    [self enableSaveButtonForCard: self.textViewQuestion.text
+                        answer: changedString];
     
     return YES;
+}
+
+- (void) enableSaveButtonForCard: (NSString*) cardQuestion
+                          answer: (NSString*) cardAnswer {
+    self.buttonSaveFlashcard.enabled = (cardQuestion.length > 0 &&
+                                        cardAnswer.length > 0);
 }
 
 /*
@@ -69,21 +77,6 @@
     } else {
         self.buttonSaveFlashcard.enabled = NO;
     }
-}*/
-/*
-- (BOOL)textField:(UITextField *)textField
-shouldChangeCharactersInRange:(NSRange)range
-replacementString:(NSString *)string {
-    
-    NSString *changedString = [self.textFieldAnswer.text stringByReplacingCharactersInRange:range withString:string];
-    
-    if (self.textViewQuestion.text.length > 0 && self.textFieldAnswer.text.length > 0) {
-        self.buttonSaveFlashcard.enabled = YES;
-    } else {
-        self.buttonSaveFlashcard.enabled = NO;
-    }
-    
-    return YES;
 }*/
 
 /*
